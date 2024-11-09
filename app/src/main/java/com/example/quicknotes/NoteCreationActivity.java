@@ -1,5 +1,6 @@
 package com.example.quicknotes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -26,7 +27,7 @@ public class NoteCreationActivity extends AppCompatActivity {
         spinnerCategory = findViewById(R.id.spinnerCategory);
         buttonSaveNote = findViewById(R.id.buttonSaveNote);
 
-        // Set up the spinner with categories
+        // Set up the Spinner with categories
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.note_categories, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -49,9 +50,16 @@ public class NoteCreationActivity extends AppCompatActivity {
         });
     }
 
-    // Method to save the note (this can be expanded based on how you want to store the notes)
+    // Method to save the note
     private void saveNote(String title, String preview, String category) {
-        // Example: You could save the note in a database, SharedPreferences, or a list
+        // Create an Intent to pass data back to the HomeActivity
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra("noteTitle", title);
+        resultIntent.putExtra("notePreview", preview);
+        resultIntent.putExtra("noteCategory", category);
+
+        // Set the result to indicate that the note is saved
+        setResult(RESULT_OK, resultIntent);
 
         // Show a message confirming that the note is saved
         Toast.makeText(this, "Note saved!", Toast.LENGTH_SHORT).show();
