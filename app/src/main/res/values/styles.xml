@@ -1,0 +1,11 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorBackground">#FFFFFF</item> <!-- Default white background for the main app -->
+    </style>
+
+    <!-- Flash Screen Theme with logo and background color -->
+    <style name="FlashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/flash_screen_background</item>
+    </style>
+</resources>
