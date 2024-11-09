@@ -2,25 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="10dp"
     android:orientation="vertical"
-    android:padding="16dp"
     android:background="?android:attr/selectableItemBackground">
 
     <!-- Note Title -->
     <TextView
         android:id="@+id/noteTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Note Title"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <!-- Note Preview -->
     <TextView
         android:id="@+id/notePreview"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Note preview goes here"
         android:textSize="14sp"
         android:textColor="#757575" />
+
+    <!-- Note Category -->
+    <TextView
+        android:id="@+id/noteCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#A0A0A0" />
 </LinearLayout>

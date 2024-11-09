@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">QuickNotes</string>
     <string name="add_note">Add Note</string>
+
+    <string-array name="note_categories">
+        <item>Work</item>
+        <item>Personal</item>
+        <item>Ideas</item>
+    </string-array>
 </resources>

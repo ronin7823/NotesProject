@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class FlashActivity extends AppCompatActivity {
 
-    private static final int SPLASH_TIME_OUT = 3000; // 3 seconds
+    private static final int SPLASH_TIME_OUT = 2000; // 3 seconds
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
