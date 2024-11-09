@@ -6,16 +6,19 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class FlashActivity extends AppCompatActivity {
+
+    private static final int SPLASH_TIME_OUT = 3000; // 3 seconds
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flash);
 
-        // Delay for 2 seconds before moving to MainActivity
+        // Handler to delay the transition to HomeActivity
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(FlashActivity.this, MainActivity.class);
+            Intent intent = new Intent(FlashActivity.this, HomeActivity.class);
             startActivity(intent);
-            finish(); // Close the flash screen so it's not on the back stack
-        }, 2000); // 2000 ms delay
+            finish(); // Close FlashActivity to prevent user from returning to it
+        }, SPLASH_TIME_OUT);
     }
 }

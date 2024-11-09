@@ -20,8 +20,14 @@
             </intent-filter>
         </activity>
 
+        <!-- HomeActivity, which should be shown after FlashActivity -->
+        <activity android:name=".HomeActivity"
+            android:exported="true" />
 
-        <!-- MainActivity without an intent filter -->
+        <!-- NoteCreationActivity -->
+        <activity android:name=".NoteCreationActivity"></activity>
+
+        <!-- MainActivity (optional, if needed) -->
         <activity
             android:name=".MainActivity"
             android:exported="false" />
